@@ -1,0 +1,48 @@
+RewriteEngine on
+
+RewriteRule ^admin/blog/([0-9a-zA-Z_-]+)$ admin/blog.php?type=$1 [NC,L]
+RewriteRule ^admin/blog/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)$ admin/blog.php?type=$1&status=$2 [NC,L]
+RewriteRule ^admin/blog/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)$ admin/blog.php?type=$1&status=$2&id=$3 [NC,L]
+RewriteRule ^admin/blog/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)$ admin/blog.php?type=$1&status=$2&id=$3&featured=$4 [NC,L]
+
+RewriteRule ^admin/executives/([0-9a-zA-Z_-]+)$ admin/executives.php?type=$1 [NC,L]
+RewriteRule ^admin/executives/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)$ admin/executives.php?type=$1&status=$2 [NC,L]
+RewriteRule ^admin/executives/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)$ admin/executives.php?type=$1&status=$2&id=$3 [NC,L]
+RewriteRule ^admin/executives/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)$ admin/executives.php?type=$1&status=$2&id=$3&featured=$4 [NC,L]
+
+RewriteRule ^admin/members/([0-9a-zA-Z_-]+)$ admin/members.php?type=$1 [NC,L]
+RewriteRule ^admin/members/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)$ admin/members.php?type=$1&id=$2 [NC,L]
+
+RewriteRule ^view/([a-zA-Z0-9-/]+)$ view.php?url=$1 [NC,L]
+RewriteRule ^view/([a-zA-Z-0-9-]+)/ view.php?url=$1 [NC,L]
+
+RewriteRule ^news/([a-zA-Z0-9-/]+)$ news.php?url=$1 [NC,L]
+RewriteRule ^news/([a-zA-Z-0-9-]+)/ news.php?url=$1 [NC,L]
+
+RewriteRule ^gallery/([a-zA-Z0-9-/]+)$ gallery.php?date=$1 [NC,L]
+RewriteRule ^gallery/([a-zA-Z-0-9-]+)/ gallery.php?date=$1 [NC,L]
+
+RewriteRule ^category/([a-zA-Z0-9-/]+)$ category.php?url=$1 [NC,L]
+RewriteRule ^category/([a-zA-Z-0-9-]+)/ category.php?url=$1 [NC,L]
+
+RewriteRule ^auth/pay-dues/([a-zA-Z0-9-/]+)$ auth/pay-dues.php?url=$1 [NC,L]
+RewriteRule ^auth/pay-dues/([a-zA-Z-0-9-]+)/ auth/pay-dues.php?url=$1 [NC,L]
+
+RewriteRule ^auth/dues-paid/([a-zA-Z0-9-/]+)$ auth/dues-paid.php?url=$1 [NC,L]
+RewriteRule ^auth/dues-paid/([a-zA-Z-0-9-]+)/ auth/dues-paid.php?url=$1 [NC,L]
+
+RewriteRule ^auth/donation-made/([a-zA-Z0-9-/]+)$ auth/donation-made.php?url=$1 [NC,L]
+RewriteRule ^auth/donation-made/([a-zA-Z-0-9-]+)/ auth/donation-made.php?url=$1 [NC,L]
+
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteCond %{REQUEST_FILENAME}\.php -f
+
+RewriteRule ^(.*)$ $1.php
+
+RewriteCond $1 !^(media|admin|assets|helpers|fonts|dist|controller|connection|robots\.txt)
+
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+ErrorDocument 404 http://127.0.0.1/gmsa-cktutas/404.php
