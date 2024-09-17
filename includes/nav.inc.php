@@ -27,7 +27,7 @@
                     <li class="nav-item navbar-dropdown"><a class="nav-link" href="<?= PROOT; ?>contact-us"><span>Contact</span></a></li>
                 </ul>
                 <!-- Button-->
-                <a class="btn d-none d-sm-inline-flex btn btn-sm btn-primary ms-auto ms-lg-60 me-30 me-lg-0 order-2 order-lg-3" href="contact-01.html" target="_self">Сontact</a>
+                <a class="btn d-none d-sm-inline-flex btn btn-sm btn-primary ms-auto ms-lg-60 me-30 me-lg-0 order-2 order-lg-3" href="<?= PROOT; ?>contact-us" target="_self">Сontact</a>
             </div>
         </nav>
 
@@ -35,7 +35,7 @@
         <div class="navbar navbar-mobile navbar-mobile-style-1 bg-white mfp-hide" id="navbar-mobile-style-1">
             <div class="navbar-wrapper">
                 <div class="navbar-head">
-                    <a class="navbar-brand d-block d-md-none" href="index.html">
+                    <a class="navbar-brand d-block d-md-none" href="<?= PROOT; ?>">
                         <img class="img-fluid rounded-1" src="<?= PROOT; ?>assets/media/logo/minateck-logo.png" width="50" height="50" />
                     </a>
                     <a class="navbar-toggle popup-modal-dismiss" href="#">
