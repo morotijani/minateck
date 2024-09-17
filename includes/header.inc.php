@@ -7,7 +7,7 @@
     <meta name="description" content="Startbox">
     <meta name="author" content="RunWebRun">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/png" href="<?= PROOT; ?>assets/img/root/favicon.png">
+    <link rel="icon" type="image/png" href="<?= PROOT; ?>assets/media/logo/minateck-logo-1.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap">
 
     <link rel="stylesheet" href="<?= PROOT; ?>assets/css/magnific-popup.css">
